@@ -1,0 +1,19 @@
+<%= form_for(@item_video) do |f| %>
+    <% if @item_video.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item_video.errors.count, "error") %> prohibited this item_video from being saved:</h2>
+
+          <ul>
+            <% @item_video.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= render "seven_portfolio/item_videos/fields", f: f %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

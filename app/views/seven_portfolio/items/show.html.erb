@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<div><%= @item.description %></div>
+<div><%= @item.is_featured %></div>
+<div><%= @item.finished_at %></div>
+<div><%= @item.item_type %></div>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - portfolio_db@localhost" uuid="538a0330-6167-4dc1-bfc0-89e4a48427f7">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>portfolio_db.*</schema-pattern>
+      <default-schemas>portfolio_db.*</default-schemas>
+    </data-source>
+  </component>
+</project>
