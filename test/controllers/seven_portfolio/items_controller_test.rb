@@ -18,7 +18,7 @@ module SevenPortfolio
       assert_response :success
     end
 
-    test "should create item" do
+    test "should create item with video" do
       item_desc = "desc test"
       video_url = "http://www.video.com"
       assert_difference('Item.count') do
@@ -40,6 +40,28 @@ module SevenPortfolio
       assert_equal item.description, item_desc
       assert_equal item.item_type, 1
       assert_equal item.item_video.url, video_url
+    end
+
+    test "should create item with gallery" do
+      item_desc = "desc test"
+      gallery_title = "gallery_title"
+      assert_difference('Item.count') do
+        post :create, item: {
+            description: item_desc,
+            is_featured: false,
+            finished_at: Date.today,
+            item_type: 0,
+            item_gallery_attributes: {
+              title: gallery_title
+            }
+        }
+      end
+
+      assert_redirected_to item_path(assigns(:item))
+      item = assigns(:item)
+      assert_equal item.description, item_desc
+      assert_equal item.item_type, 0
+      assert_equal item.item_gallery.title, gallery_title
     end
 
     test "should show item" do

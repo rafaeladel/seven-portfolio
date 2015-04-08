@@ -17,6 +17,7 @@ module SevenPortfolio
     def new
       @item = Item.new
       @item.build_item_video
+      @item.build_item_gallery
     end
 
     # GET /items/1/edit
@@ -56,7 +57,9 @@ module SevenPortfolio
 
       # Only allow a trusted parameter "white list" through.
       def item_params
-        params[:item].permit(:description, :finished_at, :is_featured, :item_type, item_video_attributes: [:url, :description, :title])
+        params[:item].permit(:description, :finished_at, :is_featured, :item_type,
+                             item_video_attributes: [:url, :description, :title],
+                             item_gallery_attributes: [:title])
       end
   end
 end

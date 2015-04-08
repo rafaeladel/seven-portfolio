@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406140112) do
+ActiveRecord::Schema.define(version: 20150408143734) do
+
+  create_table "seven_gallery_galleries", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "seven_portfolio_item_id"
+  end
+
+  add_index "seven_gallery_galleries", ["seven_portfolio_item_id"], name: "index_seven_gallery_galleries_on_seven_portfolio_item_id"
+
+  create_table "seven_gallery_photos", force: :cascade do |t|
+    t.string   "caption"
+    t.string   "image"
+    t.integer  "seven_gallery_gallery_id"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.boolean  "is_new",                   default: true
+    t.boolean  "is_featured",              default: false
+    t.text     "description"
+    t.string   "alt"
+    t.integer  "position",                 default: 0
+  end
+
+  add_index "seven_gallery_photos", ["seven_gallery_gallery_id"], name: "index_seven_gallery_photos_on_seven_gallery_gallery_id"
 
   create_table "seven_portfolio_item_videos", force: :cascade do |t|
     t.string   "url"
@@ -30,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150406140112) do
     t.text     "description"
     t.date     "finished_at"
     t.boolean  "is_featured", default: false
-    t.integer  "item_type"
+    t.integer  "item_type",   default: 0
   end
 
 end

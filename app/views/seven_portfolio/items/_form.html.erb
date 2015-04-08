@@ -26,7 +26,7 @@
       <%= f.label :item_type %>
       <br/>
 
-      <div>
+      <div class="item_type_radio_wrapper">
         <%= f.radio_button :item_type, 0, id: :item_type_gallery, class: :item_type_radio %>
         <%= f.label :item_type, "Gallery", for: :item_type_gallery %>
 
@@ -36,7 +36,9 @@
     </div>
     <div class="item_type_wrapper">
       <div class="item_gallery_wrapper" data-id="item_type_gallery">
-        Item gallery here
+        <%= f.fields_for :item_gallery do |f_g| %>
+            <%= render "seven_portfolio/item_gallery/fields", f: f_g %>
+        <% end %>
       </div>
       <div class="item_video_wrapper" data-id="item_type_video">
         <%= f.fields_for :item_video do |f_v| %>
