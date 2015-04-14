@@ -3,6 +3,7 @@ require 'bootstrap-sass'
 require 'minitest/autorun'
 require 'mini_backtrace'
 require 'seven_gallery'
+require 'auto_html'
 
 module SevenPortfolio
   class Engine < ::Rails::Engine

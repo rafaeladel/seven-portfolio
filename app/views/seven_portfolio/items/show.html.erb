@@ -11,5 +11,5 @@
 <% if @item.item_type == 0 %>
     <%= render "seven_portfolio/item_gallery/photos/form" %>
 <% elsif @item.item_type == 1 %>
-    video
+    <%= render "seven_portfolio/item_videos/show" %>
 <% end %>

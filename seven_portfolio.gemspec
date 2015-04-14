@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-rails'
   s.add_dependency "will_paginate"
   s.add_dependency "seven_gallery"
+  s.add_dependency "auto_html"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'minitest-reporters'
