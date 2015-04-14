@@ -5,11 +5,11 @@
 <div><%= @item.finished_at %></div>
 <div><%= @item.item_type %></div>
 
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
+
 <% if @item.item_type == 0 %>
     <%= render "seven_portfolio/item_gallery/photos/form" %>
 <% elsif @item.item_type == 1 %>
     video
 <% end %>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>

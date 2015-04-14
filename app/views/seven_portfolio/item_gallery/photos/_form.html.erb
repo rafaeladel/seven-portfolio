@@ -1,0 +1,8 @@
+<%= render "seven_portfolio/item_gallery/photos/uploader_wrapper" %>
+
+<%= link_to "rearrange", seven_gallery.arrange_photos_gallery_path(@item.item_gallery) %>
+
+<%= render "seven_portfolio/item_gallery/photos/photos_wrapper", photos: @item.item_gallery.photos %>
+<div class="row">
+  <%= will_paginate @photos %>
+</div>

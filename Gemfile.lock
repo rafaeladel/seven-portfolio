@@ -76,7 +76,7 @@ GEM
       rails (> 3.1)
     erubis (2.7.0)
     execjs (2.5.0)
-    globalid (0.3.3)
+    globalid (0.3.4)
       activesupport (>= 4.1.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -144,7 +144,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    seven_gallery (0.0.2)
+    seven_gallery (0.0.5)
       bootstrap-sass
       carrierwave
       coffee-rails
