@@ -26,11 +26,6 @@ module SevenPortfolio
       assert_redirected_to item_video_path(assigns(:item_video))
     end
 
-    test "should show item_video" do
-      get :show, id: @item_video
-      assert_response :success
-    end
-
     test "should get edit" do
       get :edit, id: @item_video
       assert_response :success

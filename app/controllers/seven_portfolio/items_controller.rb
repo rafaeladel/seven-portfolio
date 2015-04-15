@@ -11,7 +11,7 @@ module SevenPortfolio
 
     # GET /items/1
     def show
-      @photos = @item.item_gallery.photos.paginate(page: params[:page])
+      @photos = @item.item_gallery.photos.paginate(page: params[:page]) if @item.item_type == 0
     end
 
     # GET /items/new
