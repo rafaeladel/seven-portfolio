@@ -4,7 +4,6 @@ module SevenPortfolio
   class ItemVideosControllerTest < ActionController::TestCase
     setup do
       @routes = Engine.routes
-      @item_video = seven_portfolio_item_videos(:one)
     end
 
     test "should get index" do

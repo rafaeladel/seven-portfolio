@@ -1,2 +1,4 @@
+# test/fixtures/seven_gallery/galleries.yml
 gallery_one:
-  title: gallery_one_title
+  title: seven_gallery_gallery_one_title
+  item: item_one

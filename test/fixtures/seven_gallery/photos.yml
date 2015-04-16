@@ -1,2 +1,4 @@
+# test/fixtures/seven_gallery/photos.yml
 photo_one:
   caption: photo_one_caption
+  gallery: gallery_one

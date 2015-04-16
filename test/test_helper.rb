@@ -21,3 +21,11 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.fixture_path = File.expand_path("../fixtures", __FILE__)
   ActiveSupport::TestCase.fixtures :all
 end
+
+
+class ActiveSupport::TestCase
+  self.set_fixture_class :seven_gallery_galleries => SevenGallery::Gallery
+  self.set_fixture_class :seven_gallery_photos => SevenGallery::Photo
+  self.set_fixture_class :seven_portfolio_item_videos => SevenPortfolio::ItemVideo
+  self.set_fixture_class :seven_portfolio_items => SevenPortfolio::Item
+end
