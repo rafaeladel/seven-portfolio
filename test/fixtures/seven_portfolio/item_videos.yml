@@ -1,7 +1,5 @@
 # test/fixtures/seven_portfolio/item_videos.yml
 
-one:
-  item: item_one
-
+one: {}
 two: {}
 

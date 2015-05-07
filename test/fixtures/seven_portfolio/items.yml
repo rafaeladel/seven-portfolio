@@ -1,10 +1,13 @@
 # test/fixtures/seven_portfolio/items.yml
 
-item_one: {}
-item_two: {}
+item_one:
+  description: item one description
+  finished_at: <%= 7.days.ago %>
+  is_featured: true
+  item_type: 0
 
-#item_two:
-#  description: item one description
-#  finished_at: <%= 6.days.ago %>
-#  is_featured: true
-#  item_type: 1
+item_two:
+  description: item two description
+  finished_at: <%= 6.days.ago %>
+  is_featured: false
+  item_type: 1

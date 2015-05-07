@@ -24,6 +24,8 @@ end
 
 
 class ActiveSupport::TestCase
+  FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+  FactoryGirl.find_definitions
   self.set_fixture_class :seven_gallery_galleries => SevenGallery::Gallery
   self.set_fixture_class :seven_gallery_photos => SevenGallery::Photo
   self.set_fixture_class :seven_portfolio_item_videos => SevenPortfolio::ItemVideo

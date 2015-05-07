@@ -4,7 +4,7 @@ module SevenPortfolio
   class ItemsControllerTest < ActionController::TestCase
     setup do
       @routes = Engine.routes
-      @item = items(:item_one)
+      @item = FactoryGirl.create(:item_one)
     end
 
     test "should get index" do
