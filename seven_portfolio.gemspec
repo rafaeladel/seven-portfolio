@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = SevenPortfolio::VERSION
   s.authors     = ["rafael"]
   s.email       = ["rafael.adel20@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SevenPortfolio."
-  s.description = "TODO: Description of SevenPortfolio."
+  s.homepage    = "https://github.com/rafaeladel/seven-portfolio.git"
+  s.summary     = "Summary of SevenPortfolio."
+  s.description = "Description of SevenPortfolio."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency "bootstrap-sass"
   s.add_dependency "sass-rails"
   s.add_dependency "jquery-rails"
-  s.add_dependency 'sass-rails'
   s.add_dependency 'uglifier'
   s.add_dependency 'coffee-rails'
   s.add_dependency "will_paginate"
