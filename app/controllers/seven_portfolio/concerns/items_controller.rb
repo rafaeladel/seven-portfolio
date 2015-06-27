@@ -6,7 +6,7 @@ module SevenPortfolio::Concerns::ItemsController
   end
   # GET /items
   def index
-    @items = Item.all
+    @items = SevenPortfolio::Item.all
   end
 
   # GET /items/1
@@ -16,7 +16,7 @@ module SevenPortfolio::Concerns::ItemsController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = SevenPortfolio::Item.new
     @item.build_item_video
     @item.build_item_gallery
   end
@@ -27,7 +27,7 @@ module SevenPortfolio::Concerns::ItemsController
 
   # POST /items
   def create
-    @item = Item.new(item_params)
+    @item = SevenPortfolio::Item.new(item_params)
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
     else
@@ -53,7 +53,7 @@ module SevenPortfolio::Concerns::ItemsController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_item
-    @item = Item.find(params[:id])
+    @item = SevenPortfolio::Item.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
