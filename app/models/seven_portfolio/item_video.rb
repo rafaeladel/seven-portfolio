@@ -1,5 +1,5 @@
 module SevenPortfolio
   class ItemVideo < ActiveRecord::Base
-    belongs_to :item, class_name: 'SevenPortfolio::Item'
+    include SevenPortfolio::Concerns::ItemVideo
   end
 end
