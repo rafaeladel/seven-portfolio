@@ -20,7 +20,7 @@ module SevenPortfolio::Concerns::Item
   end
 
   def generate_gallery_title
-      gallery.title = "#{title}_gallery"
+    item_gallery.title = "#{title}_gallery"
   end
 
   def type_content
