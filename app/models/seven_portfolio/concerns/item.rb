@@ -4,9 +4,9 @@ module SevenPortfolio::Concerns::Item
     enum item_type: [:no_media, :gallery, :video]
     has_one :item_video, class_name:'SevenPortfolio::ItemVideo', foreign_key: "seven_portfolio_item_id"
     has_one :item_gallery, class_name: 'SevenGallery::Gallery', foreign_key: "seven_portfolio_item_id"
-    accepts_nested_attributes_for :item_video, :item_gallery, reject_if: :all_blank
+    accepts_nested_attributes_for :item_video, :item_gallery
 
-    before_save :process_type
+    before_save :process_type, :generate_gallery_title
   end
 
   def process_type
@@ -17,6 +17,10 @@ module SevenPortfolio::Concerns::Item
     elsif video?
       build_item_video
     end
+  end
+
+  def generate_gallery_title
+      gallery.title = "#{title}_gallery"
   end
 
   def type_content
