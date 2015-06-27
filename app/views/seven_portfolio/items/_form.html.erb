@@ -27,10 +27,13 @@
       <br/>
 
       <div class="item_type_radio_wrapper">
-        <%= f.radio_button :item_type, 0, id: :item_type_gallery, class: :item_type_radio %>
+        <%= f.radio_button :item_type, :no_media, id: :item_type_no_media, class: :item_type_radio %>
+        <%= f.label :item_type, "No Media", for: :item_type_no_media %>
+
+        <%= f.radio_button :item_type, :gallery, id: :item_type_gallery, class: :item_type_radio %>
         <%= f.label :item_type, "Gallery", for: :item_type_gallery %>
 
-        <%= f.radio_button :item_type, 1, id: :item_type_video, class: :item_type_radio %>
+        <%= f.radio_button :item_type, :video, id: :item_type_video, class: :item_type_radio %>
         <%= f.label :item_type, "Video", for: :item_type_video %>
       </div>
     </div>

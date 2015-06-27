@@ -8,8 +8,8 @@
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
 
-<% if @item.item_type == 0 %>
+<% if @item.gallery? %>
     <%= render "seven_portfolio/item_gallery/photos/form" %>
-<% elsif @item.item_type == 1 %>
+<% elsif @item.video? %>
     <%= render "seven_portfolio/item_videos/show" %>
 <% end %>
