@@ -7,16 +7,13 @@ module SevenPortfolio::Concerns::Item
     accepts_nested_attributes_for :item_video, :item_gallery, reject_if: :no_media?
 
     before_save :process_type
+
+    before_create :set_gallery_name, if: :gallery?
+
   end
 
-  def process_type
-    if no_media?
-      nil
-    elsif gallery?
-      build_item_gallery
-    elsif video?
-      build_item_video
-    end
+  def set_gallery_name
+    build_item_gallery(title: "#{title}_gallery")
   end
 
   def type_content
