@@ -57,6 +57,6 @@ module SevenPortfolio::Concerns::ItemVideosController
 
   # Only allow a trusted parameter "white list" through.
   def item_video_params
-    params[:item_video]
+    params[:item_video].permit(:url, :description, :title)
   end
 end
