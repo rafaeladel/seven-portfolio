@@ -38,12 +38,7 @@
       </div>
     </div>
     <div class="item_type_wrapper">
-      <div class="item_gallery_wrapper" data-id="item_type_gallery">
-        <%= f.fields_for :item_gallery do |f_g| %>
-            <%= render "seven_portfolio/item_gallery/fields", f: f_g %>
-        <% end %>
-      </div>
-      <div class="item_video_wrapper" data-id="item_type_video">
+       <div class="item_video_wrapper" data-id="item_type_video">
         <%= f.fields_for :item_video do |f_v| %>
             <%= render "seven_portfolio/item_videos/fields", f: f_v %>
         <% end %>
