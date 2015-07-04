@@ -55,6 +55,7 @@ module SevenPortfolio::Concerns::ItemsController
   def set_item
     @item = SevenPortfolio::Item.find(params[:id])
     @item.item_video ||= SevenPortfolio::ItemVideo.new
+
   end
 
   # Only allow a trusted parameter "white list" through.
