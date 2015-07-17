@@ -6,12 +6,12 @@ PATH
       bootstrap-sass
       coffee-rails
       jquery-rails
+      kaminari
       mysql2
       rails (~> 4.2.1)
       sass-rails
       seven_gallery
       uglifier
-      will_paginate
 
 GEM
   remote: https://rubygems.org/
@@ -92,6 +92,9 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.2)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -143,7 +146,7 @@ GEM
     redcarpet (3.3.2)
     rinku (1.5.1)
     ruby-progressbar (1.7.5)
-    sass (3.4.15)
+    sass (3.4.16)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
