@@ -4,5 +4,5 @@
 
 <%= render "seven_portfolio/item_gallery/photos/photos_wrapper", photos: @item.item_gallery.photos %>
 <div class="row">
-  <%= will_paginate @photos %>
+  <%= paginate @photos %>
 </div>
